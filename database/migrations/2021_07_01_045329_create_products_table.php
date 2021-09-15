@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->string('color')->nullable();
             $table->date('debut_year')->nullable();
             $table->string('origin')->nullable();
-            $table->string('category_id')->nullable();
+    -        $table->string('category_id')->nullable();
             $table->text('image')->nullable();
             $table->timestamps();
         });

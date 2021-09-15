@@ -1,4 +1,4 @@
-// Import 
+// Import
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/variables';
 
@@ -6,7 +6,7 @@ $font-primary: 'Montserrat',Arial, sans-serif;
 $font-secondary: 'Rokkitt', Georgia, serif;
 
 // Overrides
-$grid-gutter-width: 20px !default; 
+$grid-gutter-width: 20px !default;
 $border-radius-base:  4px !default;
 $padding-base-vertical: 14px !default;
 
@@ -90,7 +90,7 @@ $form-group-margin-bottom:       30px !default;
 	/* Better Font Rendering =========== */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 }
 
 
@@ -98,7 +98,7 @@ $form-group-margin-bottom:       30px !default;
 
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 
@@ -117,9 +117,9 @@ body {
 	height: 100%;
 	@include transition(.5s);
 	.offcanvas & {
-		overflow: hidden;	
+		overflow: hidden;
 		position: absolute;
-		
+
 		&:after {
 			@include transition(2s);
 			position: absolute;
@@ -298,7 +298,7 @@ h1, h2, h3, h4, h5,
 						border-width: 8px;
 						margin-left: -8px;
 					}
-					
+
 					li {
 						display: block;
 						margin-bottom: 7px;
@@ -1173,7 +1173,7 @@ h1, h2, h3, h4, h5,
 		font-size: 13px;
 		text-transform: uppercase;
 		color: rgba($brand-black,1);
-	}	
+	}
 	.form-group{
 		margin-bottom: 20px;
 	}
@@ -1186,7 +1186,7 @@ h1, h2, h3, h4, h5,
 		-ms-appearance: none;
 		-o-appearance: none;
 		appearance: none;
-		// border: 1px solid lighten($brand-black,94%);
+		// border: 1px solid lighten($show_brand-black,94%);
 		border: none;
 		color: lighten($brand-black,60%);
 		background: $brand-white;
@@ -1228,7 +1228,7 @@ h1, h2, h3, h4, h5,
 	}
 	textarea.form-control {
 		height: inherit;
-		resize:vertical; 
+		resize:vertical;
 	}
 	.btn-block{
 		margin-top: 28px;
@@ -1244,7 +1244,7 @@ h1, h2, h3, h4, h5,
 .featured-img,
 .prod-img,
 .user-img,
-.product-img, 
+.product-img,
 .blog-img,
 .colorlib-video{
 	background-size: cover;
@@ -1279,14 +1279,14 @@ h1, h2, h3, h4, h5,
 		display: table;
 		text-align: center;
 		background: $brand-secondary;
-		
+
 		-webkit-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		-moz-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		-ms-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		-o-box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		box-shadow: 0px 14px 30px -15px rgba(0,0,0,0.75);
 		@include border-radius(50%);
-		
+
 		i {
 			text-align: center;
 			display: table-cell;
@@ -1307,7 +1307,7 @@ h1, h2, h3, h4, h5,
 	}
 	&:hover {
 		.overlay {
-			background: rgba(0, 0, 0, .7);		
+			background: rgba(0, 0, 0, .7);
 		}
 		a {
 			-webkit-transform: scale(1.1);
@@ -1315,7 +1315,7 @@ h1, h2, h3, h4, h5,
 			-ms-transform: scale(1.1);
 			-o-transform: scale(1.1);
 			transform: scale(1.1);
-			
+
 		}
 	}
 }
@@ -1360,7 +1360,7 @@ h1, h2, h3, h4, h5,
 	background: $brand-white !important;
 	border: 1px solid rgba(0,0,0,.05) !important;
 	@include border-radius(2px);
-	
+
 	&:focus, &:active {
 		box-shadow: none;
 		border: 1px solid rgba(0,0,0,.8) !important;
@@ -1597,7 +1597,7 @@ input[type="text"] {
 			text-decoration: none;
 			outline: none;
 		}
-	}	
+	}
 }
 
 

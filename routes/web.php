@@ -31,7 +31,14 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/search', [ProductController::class, 'search'])->name('product.search');
     Route::get('/create', [ProductController::class, 'create'])->name('product.create');
     Route::post('/create', [ProductController::class, 'store'])->name('product.store');
-    Route::post('/update', [ProductController::class, 'edit'])->name('product.edit');
+    Route::get('{id}/update', [ProductController::class, 'showUpdate'])->name('product.edit');
+    Route::post('/update', [ProductController::class, 'edit'])->name('product.update');
+    Route::delete('{id}/delete', [ProductController::class, 'deleteProduct'])->name('product.delete');
+    Route::get('{id}/filter', [ProductController::class, 'getProduct'])->name('product.getProduct');
+    Route::get('/category', [ProductController::class, 'showCategory'])->name('filter.category');
+    Route::get('/category2', [ProductController::class, 'showCategory2'])->name('filter2.category');
+    Route::get('/brand', [ProductController::class, 'brand'])->name('brand.product');
+
 
     // auth
     Route::get('/logout',[AuthController::class,'logout'])->name('auth.logout');

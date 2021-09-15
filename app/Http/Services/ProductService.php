@@ -24,14 +24,16 @@ class ProductService
         return $this->productRepo->getAll();
     }
 
-    function store($request)
+    function store( $request)
     {
         $products = new Product();
         $products ->fill($request->all());
+        $products->name = $request->name;
         $products->brand_id = $request->brand_id;
+        $products->category_id = $request->category_id;
         $file = $request->image;
         if ($request->hasFile('image')){
-            $newFile = $request->name . '.' . $file->getClientOriginalExtension();
+            $newFile = time() . '-'. $request->name . $file->getClientOriginalExtension();
             $request->file('image')->storeAs('public/images',$newFile);
             $products->image= $newFile;
         }
@@ -44,6 +46,5 @@ class ProductService
     public function delete($id){
         $product = $this->productRepo->getById($id);
         $product->delete();
-//        $this->productRepo->destroy($products);
     }
 }

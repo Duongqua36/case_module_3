@@ -55,7 +55,9 @@
                 <div class="login-box">
                     <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
                         <option>Register Here</option>
-                        <option>Sign In</option>
+                        <option>
+                            <a href="{{route('auth.showFormLogin')}}">Sign In</a>
+                        </option>
                     </select>
                 </div>
                 <div class="text-slid-box">

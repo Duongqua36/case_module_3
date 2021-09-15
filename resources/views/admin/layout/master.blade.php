@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <title>Quantum Able Bootstrap 4 Admin Dashboard Template</title>
     <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -9,7 +10,7 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
@@ -232,7 +233,7 @@ yi
     <!-- Side-Nav-->
     <aside class="main-sidebar hidden-print ">
         <section class="sidebar" id="sidebar-scroll">
-            <!-- Sidebar Menu-->
+{{--            <!-- Sidebar Menu-->{{dd($categories)}}--}}
             <ul class="sidebar-menu">
                 <li class="nav-level">--- Navigation</li>
                 <li class="active treeview">
@@ -241,51 +242,34 @@ yi
                     </a>
                 </li>
                 <li class="nav-level">--- Components</li>
-                <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-briefcase"></i><span> UI Elements</span><i
+                <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-briefcase"></i><span> Brand </span><i
                             class="icon-arrow-down"></i></a>
                     <ul class="treeview-menu">
-                        <li><a class="waves-effect waves-dark" href="accordion.html"><i class="icon-arrow-right"></i>
-                                Accordion</a></li>
+                        <li><a class="waves-effect waves-dark" href="{{route('brand.product')}}"><i class="icon-arrow-right"></i>
+                                Lenovo</a></li>
                         <li><a class="waves-effect waves-dark" href="button.html"><i class="icon-arrow-right"></i>
-                                Button</a></li>
+                                Dell</a></li>
                         <li><a class="waves-effect waves-dark" href="label-badge.html"><i class="icon-arrow-right"></i>
-                                Label Badge</a></li>
-                        <li><a class="waves-effect waves-dark" href="bootstrap-ui.html"><i class="icon-arrow-right"></i>
-                                Grid system</a></li>
-                        <li><a class="waves-effect waves-dark" href="box-shadow.html"><i class="icon-arrow-right"></i>
-                                Box Shadow</a></li>
-                        <li><a class="waves-effect waves-dark" href="color.html"><i class="icon-arrow-right"></i> Color</a>
-                        </li>
-                        <li><a class="waves-effect waves-dark" href="light-box.html"><i class="icon-arrow-right"></i>
-                                Light Box</a></li>
-                        <li><a class="waves-effect waves-dark" href="notification.html"><i class="icon-arrow-right"></i>
-                                Notification</a></li>
-                        <li><a class="waves-effect waves-dark" href="panels-wells.html"><i class="icon-arrow-right"></i>
-                                Panels-Wells</a></li>
-                        <li><a class="waves-effect waves-dark" href="tabs.html"><i class="icon-arrow-right"></i>
-                                Tabs</a></li>
-                        <li><a class="waves-effect waves-dark" href="tooltips.html"><i class="icon-arrow-right"></i>
-                                Tooltips</a></li>
-                        <li><a class="waves-effect waves-dark" href="typography.html"><i class="icon-arrow-right"></i>
-                                Typography</a></li>
+                                macbook</a></li>
                     </ul>
                 </li>
-                <ul class="treeview-menu">
-                    <li><a class="waves-effect waves-dark" href="float-chart.html"><i class="icon-arrow-right"></i>
-                            Float Charts</a></li>
-                    <li><a class="waves-effect waves-dark" href="morris-chart.html"><i class="icon-arrow-right"></i>
-                            Morris Charts</a></li>
-                </ul>
                 </li>
 
-                <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-book-open"></i><span> Forms</span><i
+                <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-book-open"></i><span> Category</span><i
                             class="icon-arrow-down"></i></a>
                     <ul class="treeview-menu">
-                        <li><a class="waves-effect waves-dark" href="form-elements-bootstrap.html"><i
-                                    class="icon-arrow-right"></i> Form Elements Bootstrap</a></li>
-
-                        <li><a class="waves-effect waves-dark" href="form-elements-advance.html"><i
-                                    class="icon-arrow-right"></i> Form Elements Advance</a></li>
+{{--                        @foreach($products as $product)--}}
+{{--                            @if($product->category_id == 1 )--}}
+                            <li><a class="waves-effect waves-dark" href="{{route('filter.category')}}"><i
+                                    class="icon-arrow-right"></i> personal computer </a></li>
+{{--                            @endif--}}
+{{--                        @endforeach--}}
+{{--                            @foreach($products as $product)--}}
+{{--                                @if($product->category_id == 2 )--}}
+                        <li><a class="waves-effect waves-dark" href="{{route('filter2.category')}}"><i
+                                    class="icon-arrow-right"></i> gaming computer </a></li>
+{{--                                @endif--}}
+{{--                            @endforeach--}}
                     </ul>
                 </li>
 
@@ -760,7 +744,7 @@ yi
         }
     });
 </script>
-
+<!-- JavaScript Bundle with Popper -->
 </body>
 
 </html>
